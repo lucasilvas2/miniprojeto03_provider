@@ -1,4 +1,7 @@
-class Place {
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class Place extends ChangeNotifier {
   String id;
   List<String> paises;
   String titulo;
@@ -17,4 +20,9 @@ class Place {
       required this.avaliacao,
       required this.custoMedio,
       this.isFavorite = false});
+
+  void toggleFavorite() {
+    this.isFavorite = !isFavorite;
+    notifyListeners();
+  }
 }

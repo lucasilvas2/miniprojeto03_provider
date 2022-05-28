@@ -1,4 +1,4 @@
-import 'package:f3_lugares/models/favorite.dart';
+import 'package:f3_lugares/models/place_list.dart';
 import 'package:f3_lugares/models/place.dart';
 import 'package:f3_lugares/screens/countries_places_screen.dart';
 import 'package:f3_lugares/screens/place_detail_screen.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => Favorite(),
+      create: (context) => PlaceList(),
       child: MaterialApp(
         title: 'PlacesToGo',
         theme: ThemeData(
