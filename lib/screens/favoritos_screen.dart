@@ -10,7 +10,10 @@ class FavoritosScreen extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Text('Meus Favoritos'),
+          Text(
+            'Meus Lugares Favoritos',
+            style: Theme.of(context).textTheme.headline4,
+          ),
           Expanded(
             child: Consumer<Favorite>(
               builder: (context, value, child) {
