@@ -1,4 +1,4 @@
-import 'package:f3_lugares/models/favorite.dart';
+import 'package:f3_lugares/models/place_list.dart';
 import 'package:f3_lugares/models/place.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -68,8 +68,9 @@ class PlaceDetailScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          final favoritePlace = context.read<Favorite>();
-          favoritePlace.addPlaceFavorite(place);
+          // final favoritePlace = context.read<PlaceList>();
+          // favoritePlace.addPlaceFavorite(place);
+          place.toggleFavorite();
           Navigator.of(context).pop(place.titulo);
         },
         child: Icon(Icons.star),

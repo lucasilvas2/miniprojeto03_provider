@@ -1,10 +1,17 @@
 import 'package:f3_lugares/components/country_item.dart';
+import 'package:f3_lugares/models/place.dart';
+import 'package:f3_lugares/models/place_list.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../data/my_data.dart';
 
 class CountriesScreen extends StatelessWidget {
+  // final bool _showFavoritePlaceAll;
+  // CountriesScreen(this._showFavoritePlaceAll);
   @override
   Widget build(BuildContext context) {
+    // final provider = Provider.of<PlaceList>(context);
+    // final List<Place> loadedPlaces = _showFavoritePlaceAll ? provider.getListPlace : provider.getFavoritePlace;
     return Container(
       child: GridView(
         padding: const EdgeInsets.all(25),
